@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JORDAN_AJIBOLA_13CK015350</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+
+</head>
+<h2>
+<table style="width:100%">
+  <tr>
+    <td>Jordan Ajibola</td>
+    <td>13ck015350</td> 
+    <td>EEE</td>
+  </tr>
+</table>
+ </h2>
+
+<body>
+<h2>LAHF</h2>
+<h3>LAHF No operands Load AH from 8 low bits of Flags register.</h3>
+
+ <input type="text" id="code" onchange="afunction()" placeholder="Type LAHF..." required tabindex="1" onKeyPress="return checkSubmit(event)" ></input>
+
+ <input type="submit" value="Insructions, Assemble!" id="submit" onclick="afunction()" onkeyup="afunction()"></input><br><br>
+ <p> Please type in CAPITAL letters , Field is case sensitive </p>
+<p><b>Binary</b></p>
+<p id="demo1"></p>
+<p><b>Hexadecimal</b></p>
+<p id="demo2"></p>
+
+<script>
+var op1;
+var op2;
+
+ function checkSubmit(e) {
+   if(e && e.keyCode == 13) {
+      document.forms[0].submit();
+   }
+}
+
+
+function afunction(code){
+
+         var code1 = document.getElementById("code").value;
+		 var bin;
+		 var hex;
+	
+		 
+if ( code1 == "LAHF"){
+
+bin = "10011111";
+hex = "9F";
+	   
+}else {
+
+bin = "Error";
+hex = "Error";
+	} 
+document.getElementById("demo1").innerHTML = bin;
+document.getElementById("demo2").innerHTML = hex;
+ }
+</script>
+</body>
+
+</html>
